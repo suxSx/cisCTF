@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Silje Stadheim">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <title>cisCTF/writeups</title>
+  <script>
+    window.onload = main;
+
+    var arr = [];
+    //= ["Navn på oppgave","filsti til dokumentasjon"];
+    arr[0] = ["insp","E:/OneDrive/CIS/_Diverse/javascript/cisctf/txt_writeups/web_insp.txt"];
+    arr[1] = ["kamo","E:/OneDrive/CIS/_Diverse/javascript/cisctf/txt_writeups/forensics_kamu.txt"];
+
+    function main() {
+      //tilbakeknapp
+      var tekst = "<-- Tilbake til dokumentasjon";
+      var link = "https://stadheim.github.io/cis/dok/index.html";
+      d("innpakning").innerHTML = tekst.link(link);
+
+      for(i=0; i<arr.length; i++) {
+        nyRamme(i);
+      }
+    }
+
+    function nyRamme(nr) {
+        //div til innhold
+        var div = document.createElement("div");
+        div.className = "ramme";
+        //overskrift
+        var navn = document.createElement("h2");
+        navn.innerHTML = arr[nr][0];
+        navn.style.color = "#5D1869";
+        //dokumentasjonsramme
+        var ramme = document.createElement("iframe");
+        ramme.setAttribute("src",arr[nr][1]);
+        ramme.style.border = "1px dotted #5D1869";
+        ramme.style.width = "75%";
+        ramme.style.height = "300px";
+        //append alt
+        div.appendChild(navn);
+        div.appendChild(ramme);
+        d("innpakning").appendChild(div);
+    }
+
+    //setter inn document.getElementById så jeg slipper å skrive de inn
+    function d(elm) { //elm for element
+        return document.getElementById(elm);
+    }
+
+  </script>
+  <style>
+    html, body {
+      font-family: 'Open Sans', sans-serif;
+      height: 75%;
+    }
+    #overskrift {
+      font-size: 60px;
+      text-align: center;
+    }
+    .ramme {
+      text-align: center;
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+    a:link, a:visited {
+      color: black;
+      text-decoration: none;
+    }
+    a:hover {
+      color: grey;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="overskrift">Dokumentasjon/cisCTF/Writeups</h1>
+
+  <div id="innpakning"></div>
+
+</body>
+</html>
