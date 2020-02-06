@@ -7,9 +7,9 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <title>cisCTF/ctfd</title>
   <script>
-
     window.onload = main;
 
+    //FILSTI MÅ ENDRES I DENNE 
     //filsti til .txt filen
     var filsti = "F:/cisCTF/setup_ctfd.txt";
 
@@ -17,7 +17,7 @@
       //tilbakeknapp
       var tekst = "<-- Tilbake til dokumentasjon";
       var link = "https://stadheim.github.io/cis/dok/index.html";
-      d("innpakning").innerHTML = tekst.link(link);
+      d("link").innerHTML = tekst.link(link);
 
       //kodefelt
       d("txtKode").src = filsti;
@@ -35,8 +35,11 @@
       height: 75%;
     }
     #overskrift {
-      font-size: 60px;
-      text-align:center
+      text-align: center
+    }
+    #link {
+      text-align: left;
+      margin-bottom: 30px;
     }
     a:link, a:visited {
       color: black;
@@ -48,11 +51,11 @@
   </style>
 </head>
 <body>
-  
-  <h1 id="overskrift">Dokumentasjon/cisCTF/CTFd</h1>
 
+  <h1 id="overskrift">Dokumentasjon/cisCTF/CTFd</h1>
+  <div id="link"></div>
   <div id="innpakning"></div>
-  <iframe id="txtKode" frameborder='0' height='100%' width='100%'>
+  <iframe id="txtKode" frameborder='0' height='100%' width='100%'></iframe>
 
 </body>
 </html>
