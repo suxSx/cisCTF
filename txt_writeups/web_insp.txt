@@ -3,4 +3,4 @@ WEB - insp
 1. Høyreklikk hvor som helst på siden
 2. Velg "inspiser"
 evt. Trykk F12
-3. 
+3.
