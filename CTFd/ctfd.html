@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Silje Stadheim">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <title>cisCTF/ctfd</title>
+  <script>
+    window.onload = main;
+
+    //FILSTI MÅ ENDRES I DENNE
+    //filsti til .txt filen
+    var filsti = "F:/cisCTF/setup_ctfd.txt";
+
+    function main() {
+      //tilbakeknapp
+      var tekst = "<-- Tilbake";
+      var link = "https://stadheim.github.io/cis/dok/cisctf/index.html";
+      d("link").innerHTML = tekst.link(link);
+
+      //kodefelt
+      d("txtKode").src = filsti;
+    }
+
+    //setter inn document.getElementById så jeg slipper å skrive de inn
+    function d(elm) { //elm for element
+        return document.getElementById(elm);
+    }
+
+  </script>
+  <style>
+    html, body {
+      font-family: 'Open Sans', sans-serif;
+      height: 75%;
+    }
+    #overskrift {
+      text-align: center;
+    }
+    #link {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    a:link, a:visited {
+      color: black;
+      text-decoration: none;
+    }
+    a:hover {
+      color: grey;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="overskrift">Dokumentasjon/cisCTF/CTFd</h1>
+  <div id="link"></div>
+  <div id="innpakning"></div>
+  <iframe id="txtKode" frameborder='0' height='100%' width='100%'></iframe>
+
+</body>
+</html>

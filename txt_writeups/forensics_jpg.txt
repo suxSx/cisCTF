@@ -1,0 +1,8 @@
+FORENSICS - .jpg - FOS 2020
+
+1. Åpne bildet i en text editor for å se bildekoden (helst «HxD» som er på skrivebordet for å se HEX koden ved siden av ASCII bokstavene)
+2. Kan se øverst på header at det er en jpg fil.
+- Flagget er helt nederst, ETTER hex-koden FF D9, som er koden for at jpg-bildet er slutt. Dette er hvorfor teksten som er kopiert inn etter denne koden ikke er synlig på bildet.
+
+cisCTF{d1n_f0r573_h3x_3d17?}
+(din første hex edit?)

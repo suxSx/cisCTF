@@ -1,6 +1,14 @@
-WEB - insp
+WEB - insp - FOS 2020
 
-1. Høyreklikk hvor som helst på siden
-2. Velg "inspiser"
-evt. Trykk F12
-3.
+1. Åpne nettsiden.
+2. Overskriften er inspeksjon + det står «høyreklikk» på tab fordi de skal høyreklikke hvor som helst på nettsiden og på «inspiser».
+Alternativt: Ctrl + Shift + I
+3. De 3 stedene i kildekoden er:
+i. Elements: i <body> er det HTML kode med første delen: cisCTF{0rd3n7l16_
+(Kan hende de må høyreklikke på kommentaren og velge «Edit as HTML» om de vil kopiere det. Dette kan man si.)
+ii. Fortsatt i Elements: Trykk på de små trekantene til høyre for <head> og så <script> for å se mer av koden. Her er 2. del av flagget: v45k_=_5lipp3
+iii. Så! Finne style.css der siste delen av flagget som er: _0m1n5p}
+(style.css er på ulike steder avhengig av nettleseren de bruker)
+
+cisCTF{0rd3n7l16_ v45k_=_5l1pp3_0m1n5p}
+(ordentlig vask = slippe ominsp)

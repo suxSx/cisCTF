@@ -1,0 +1,9 @@
+KRYPTO - digtekrypto - FOS 2020
+
+1. Start digtekrypto.exe
+2. De får binære tall som kan kopieres fra terminalen med Ctrl + C (eller Ctrl+ Shift + C) Dette må dekodes til ASCII ved en online dekoder (hint 2 er en sånn nettside, er mulig å oppfordre de til å åpne hint 2).
+3. Dette gir en streng som starter på 63 og slutter på 7D. Dette er HEX. Om de kopierer dette inn i programmet kommer det en melding om at det er HEX. Dette skal igjen dekodes til ASCII på nett.
+4. Den dekodede HEX strengen gir flagget.
+
+cisCTF{F0r_4l7_v1_h4r._06_4l7_v1_3r.}
+(For alt vi har. Og alt vi er.)

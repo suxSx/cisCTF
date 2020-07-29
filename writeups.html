@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <title>cisCTF/writeups</title>
-  <script>
+  <script type="text/javascript">
     window.onload = main;
 
-    var arr = [];
-    //= ["Navn på oppgave","filsti til dokumentasjon"];
-    arr[0] = ["insp","./txt_writeups/test.pdf"];
-    arr[1] = ["kamo","./txt_writeups/forensics_kamu.txt"];
+    var arr = [
+      "web_insp.txt",
+      "forensics_jpg.txt",
+      "krypto_digtekrypto.txt",
+      "forensics_httpSIKKER.txt",
+      "krypto_digtekrypto2.txt"];
 
     function main() {
       //tilbakeknapp
@@ -26,16 +28,18 @@
     }
 
     function nyRamme(nr) {
+        var path = "./txt_writeups/" + arr[nr];
         //div til innhold
         var div = document.createElement("div");
         div.className = "ramme";
         //overskrift
         var navn = document.createElement("h2");
-        navn.innerHTML = arr[nr][0];
+        navn.innerHTML = arr[nr].replace(/^.*[\\\/]/,"").replace(".txt","")
+        //navn.innerHTML = arr[nr][0];
         navn.style.color = "#5D1869";
         //dokumentasjonsramme
         var ramme = document.createElement("iframe");
-        ramme.setAttribute("src",arr[nr][1]);
+        ramme.setAttribute("src",path);
         ramme.style.border = "1px dotted #5D1869";
         ramme.style.width = "90%";
         ramme.style.height = "200px";
@@ -74,7 +78,6 @@
   </style>
 </head>
 <body>
-
   <h1 id="overskrift">Dokumentasjon/cisCTF/Writeups</h1>
 
   <div id="innpakning"></div>

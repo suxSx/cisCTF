@@ -1,0 +1,12 @@
+FORENSICS - httpSIKKER - FOS 2020
+
+1. Åpne bildet i WireShark
+2. Se at det er en innlogging
+3. Følg TCP strømmen med:
+- Venstreklikk på en TCP pakke
+- Follow > TCP Stream
+4. Bla til stream 5
+5. Flagget er passordet nederst i det røde tekstfeltet
+
+cisCTF{p4ss0rd_k0s_p4_F0S!}
+(passord Kos på FOS!)

@@ -1,0 +1,117 @@
+1. Åpne en linux terminal og skriv inn hver linje:	
+sudo apt-get install git
+sudo apt install docker-compose 
+sudo apt install python3-pip
+git clone https://github.com/CTFd/CTFd.git
+cd CTFd/
+pip3 install -r requirements.txt
+sudo docker-compose up
+
+2. Åpne en nettleser i VMet 
+3. Gå inn på localhost:8000
+4. Sett opp nettsiden: 
+
++ Setup
+- General
+CTF Name: cisCTF
+CTF Description: Forsvarets Cyberingeniørskole sin "offisielle" CTF 
+CTF User Mode: User mode 
+- Administration
+Admin Username: admin
+Admin Email: cisctf.forsvaret@gmail.com
+Admin Password: Password99erikkeetbrapassord!
+- Style
+Theme: core
+Theme Color: #5D1869
+- Hopp over resten
+
+
+Trykk på Admin panel (verktøy-ikon):
+
++ Theme Header:
+<style id="theme-color">
+:root {--theme-color: #5d1869;}
+.navbar{background-color: var(--theme-color) !important;}
+.jumbotron{background-color: var(--theme-color) !important;}
+</style>
+
+- Endringer
+
+- Legge til pages
+	Admin Panel (skiftenøkkelen) > Pages > New Page
+
++ route: index
++ Content:
+<body>
+  <div class="text-center" style="margin-top:10%;"> 
+  	<p style="color:#5D1869;font-size:80px;">Velkommen til cisCTF!</p>
+	<p style="font-size:30px;margin-bottom:10%;">Cyberingeniørskolens "offisielle" CTF.
+Hva er en CTF? <a href="https://www.youtube.com/watch?v=8ev9ZX9J45A">Trykk her for å finne ut.</br></a> Dette er en jeopardy der oppgaver vil bli publisert månedlig under "Challenges", frem til det er det bare å spille andre CTFer som Wargames og PicoCTF! Og hvis du sliter:</p>
+	<a href="http://google.com/" style="text-decoration:none;color:#5D1869;font-size:80px;">JUST GOOGLE IT!</a>
+  </div>
+</body>
+
++ CTFtime - https://ctftime.org/
++ Title: CTFtime
++ Route: /ctftime
++ Content: 
+<script>
+	window.onload = function() {window.open("https://ctftime.org/","_blank");};
+</script>
+<body>
+  <div class="text-center" style="margin-top:5%;"> 
+  	<p style="color:#5D1869;font-size:40px;">CTFtime</p>
+	<p style="font-size:30px;margin-bottom:10%;">
+    	Denne nettsiden er en oversikt over ulike CTFer som pågår verden rundt. Man kan delta på de fleste og dermed løse mer enn kun pico og wargames. 
+        </br></br>Det er verdt å merke seg at de ulike har en "Rating weight" der høyere tall tilsier en vanskeligere CTF. I begynnelsen kan de være lurt å velge de som er under 20.
+        </br></br>Og hvis man ønsker kan man lage konto som registrer hvilken plass en endte der man deltok. 
+    </p>
+  </div>
+</body>
+
++ picoCTF - https://2019game.picoctf.com/
++ Title: picoCTF
++ Route: /picoctf
++ Content:
+<script>
+	window.onload = function() {window.open("https://2019game.picoctf.com/","_blank");};
+</script>
+<body>
+  <div class="text-center" style="margin-top:5%;"> 
+  	<p style="color:#5D1869;font-size:40px;">picoCTF</p>
+	<p style="font-size:30px;margin-bottom:10%;">
+    	picoCTF er en CTF som begynner enkelt og gradvis øker vanskelighetsgraden. Det er hint og veiledning i hver oppgave som gjør at man kan lære imens man løser oppgavene. Etterhvert som man får til flere oppgaver innen en kategori vil flere, vanskeligere oppgaver av samme kategori bli tilgjengelig. 
+    </p>
+  </div>
+</body>
+
++ Wargames - https://overthewire.org/wargames/
++ Title: Wargames
++ Route: /wargames
++ Content:
+<script>
+	window.onload = function() {window.open("https://overthewire.org/wargames/","_blank");};
+</script>
+<body>
+  <div class="text-center" style="margin-top:5%;"> 
+  	<p style="color:#5D1869;font-size:40px;">Wargames</p>
+	<p style="font-size:30px;margin-bottom:10%;">
+    	Her er det mange ulike oppgaver du kan løse. Den skiller seg noe ut fra CTF fordi en må koble seg til oppgaven gjennom terminalen. Å være kjent med terminalen og hvordan bruke er fordel i fag som Datakommunikasjon og Operativssystemer.
+    </p>
+  </div>
+</body>
+
+5. Skru av tjenesten (sudo docker-compose stop)
+6. Skru av VM 
+7. I VMware Workstation: VM > Upload...
+8. Følg Wizard for å laste VM opp på 10.36.10.30 under CIS
+9. Trykk på cisCTF inne på serveren
+10. Sett riktig MAC-adresse FØR oppstart:
+VM > Settings > Network adapter > Advanced 
+Lim inn: 00:0E:29:A6:27:55
+10. Start opp VM inne på serveren
+11. Logg inn og sjekk at ip adressen er satt til 10.36.10.36
+Inne i terminalen: ip a
+12. Start opp VM igjen med: sudo docker-compose start
+13. Besøk nettsiden på 10.36.10.36:8000 på alle datamaskiner koblet til "Internet"-internettet
+14. Send melding til Bøe om å koble ip adressen til DNS: ctf.cis

@@ -1,0 +1,8 @@
+KRYPTO - digtekrypto2 - AUGUST 2020
+
+1. Start digtekrypto.exe
+2. Omgjør alle til ASCII og i rekkefølge blir det:
+Brainfuck -> Morse -> Base64 -> HEX -> binært -> ASCII
+
+cisCTF{V3lk0mm3n_71lb4k3_fr4_50mm3rf3r13}
+(Velkommen tilbake fra sommerferie)
