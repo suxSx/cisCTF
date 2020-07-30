@@ -10,11 +10,11 @@
     window.onload = main;
 
     var arr = [
-      "web_insp.txt",
-      "forensics_jpg.txt",
-      "krypto_digtekrypto.txt",
-      "forensics_httpSIKKER.txt",
-      "krypto_digtekrypto2.txt"];
+      "web_insp",
+      "forensics_jpg",
+      "krypto_digtekrypto",
+      "forensics_httpSIKKER",
+      "krypto_digtekrypto2"];
 
     function main() {
       //tilbakeknapp
@@ -28,13 +28,13 @@
     }
 
     function nyRamme(nr) {
-        var path = "./txt_writeups/" + arr[nr];
+        var path = "./txt_writeups/" + arr[nr] + ".txt";
         //div til innhold
         var div = document.createElement("div");
         div.className = "ramme";
         //overskrift
         var navn = document.createElement("h2");
-        navn.innerHTML = arr[nr].replace(/^.*[\\\/]/,"").replace(".txt","")
+        navn.innerHTML = arr[nr].replace(/^.*[\\\/]/,"")
         //navn.innerHTML = arr[nr][0];
         navn.style.color = "#5D1869";
         //dokumentasjonsramme
